@@ -20,7 +20,11 @@ const projects = await getCollection("projects");
     </header>
 
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-      {
+      {projects.length === 0 ? (
+        <div class="col-span-full py-12 text-center">
+          <p class="text-sm text-muted-foreground">No projects yet.</p>
+        </div>
+      ) : (
         projects.map((project) => (
           <div class="group flex h-full flex-col rounded-2xl border border-border/50 bg-muted/20 p-5 hover:border-primary/30 hover:bg-muted/40">
             <div class="mb-4 flex items-start justify-between">
@@ -93,7 +97,7 @@ const projects = await getCollection("projects");
             )}
           </div>
         ))
-      }
+      )}
     </div>
   </div>
 </Layout>
