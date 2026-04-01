@@ -1,0 +1,65 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import NewsTimeline from "@/components/blocks/NewsTimeline.astro";
+import EditPageLink from "@/components/layout/EditPageLink.astro";
+import type { PastNewsSection } from "./news/_types.mts";
+
+const pastNewsModules = import.meta.glob<{ default?: PastNewsSection[] }>(
+  "./news/past/*.mts",
+  { eager: true },
+);
+
+function collectPastNewsSections(
+  modules: Record<string, { default?: PastNewsSection[] }>,
+) {
+  return Object.entries(modules)
+    .filter(([path, module]) => {
+      if (path.endsWith("/example.mts")) {
+        return false;
+      }
+
+      return Array.isArray(module.default);
+    })
+    .sort(([pathA], [pathB]) => pathA.localeCompare(pathB))
+    .flatMap(([, module]) => module.default ?? []);
+}
+
+const pastNews = collectPastNewsSections(pastNewsModules);
+---
+
+<Layout title="Past News" description="Archived EffL news and milestones.">
+  <div
+    class="animate-in fade-in slide-in-from-bottom-4 mx-auto max-w-5xl p-8 duration-700 md:p-16"
+  >
+    <EditPageLink />
+
+    <header class="mb-12">
+      <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Past News</h2>
+      <p
+        class="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base"
+      >
+        Archived updates, milestones, and highlights from previous years.
+      </p>
+    </header>
+
+    <div class="space-y-12">
+      {
+        pastNews.map((section) => (
+          <section class="space-y-5">
+            <div class="border-b border-border/60 pb-3">
+              <h3 class="text-xl font-bold tracking-tight">{section.year}</h3>
+            </div>
+
+            <NewsTimeline items={section.items} />
+          </section>
+        ))
+      }
+    </div>
+
+    <div class="mt-12">
+      <a href="/home" class="text-sm font-medium text-primary hover:underline">
+        Back to Home
+      </a>
+    </div>
+  </div>
+</Layout>

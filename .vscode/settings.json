@@ -1,0 +1,9 @@
+{
+  "files.associations": {
+    "*.astro": "astro"
+  },
+  "editor.semanticHighlighting.enabled": true,
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  }
+}

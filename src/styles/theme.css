@@ -44,18 +44,18 @@
 .dark {
   /* --- Dark Mode: Deep Moss --- */
   --background: oklch(0.14 0.02 165);
-  --foreground: oklch(0.92 0.005 165);
+  --foreground: oklch(0.965 0.008 165);
 
-  --card: oklch(0.18 0.02 165);
-  --card-foreground: oklch(0.88 0.01 165);
+  --card: oklch(0.235 0.03 162);
+  --card-foreground: oklch(0.95 0.01 165);
 
-  --primary: oklch(0.75 0.15 160);
-  --primary-foreground: oklch(0.1 0.02 165);
+  --primary: oklch(0.8 0.14 160);
+  --primary-foreground: oklch(0.14 0.025 165);
 
-  --muted: oklch(0.28 0.02 160);
-  --muted-foreground: oklch(0.75 0.015 165);
+  --muted: oklch(0.2 0.022 162);
+  --muted-foreground: oklch(0.84 0.012 165);
 
-  --border: oklch(0.26 0.02 165);
+  --border: oklch(0.33 0.02 162);
   --shadow-main: 0 30px 60px -15px oklch(0 0 0 / 0.5);
 
   --callout-info: oklch(0.75 0.12 250);

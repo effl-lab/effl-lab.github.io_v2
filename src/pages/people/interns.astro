@@ -1,0 +1,80 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import EditPageLink from "@/components/layout/EditPageLink.astro";
+import { Icon } from "astro-icon/components";
+import type { InternEntry } from "./interns/_types.mts";
+
+// Add person files in `src/pages/people/interns/*.mts`.
+// Each file should export a default `InternEntry`.
+const internModules = import.meta.glob<{ default?: InternEntry }>(
+  "./interns/*.mts",
+  { eager: true },
+);
+
+const interns = Object.values(internModules)
+  .flatMap((module, index) => {
+    const path = Object.keys(internModules)[index] ?? "";
+
+    if (path.endsWith("/example.mts")) {
+      return [];
+    }
+
+    return module.default ? [module.default] : [];
+  })
+  .sort(
+    (a, b) =>
+      (a.order ?? Number.MAX_SAFE_INTEGER) -
+        (b.order ?? Number.MAX_SAFE_INTEGER) || a.name.localeCompare(b.name),
+  );
+---
+
+<Layout
+  title="Interns"
+  description="Interns and short-term researchers at EffL."
+>
+  <div
+    class="animate-in fade-in slide-in-from-bottom-4 mx-auto max-w-4xl p-8 duration-700 md:p-16"
+  >
+    <EditPageLink />
+
+    <header class="mb-12">
+      <h2 class="mb-4 text-3xl font-bold tracking-tight">Interns</h2>
+      <p class="text-sm font-light text-muted-foreground italic">
+        Interns and short-term researchers at EffL.
+      </p>
+    </header>
+
+    <div class="space-y-4">
+      {
+        interns.map((intern) => (
+          <article class="group rounded-[1.7rem] border border-border/60 bg-muted/15 px-5 py-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-muted/35 hover:shadow-lg md:px-6">
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+              <div class="min-w-0 flex-1">
+                <h3 class="text-lg font-bold tracking-tight text-foreground">
+                  {intern.name}
+                </h3>
+                <div class="mt-3 inline-flex items-center gap-2 text-sm font-medium text-primary/85">
+                  <Icon name="mdi:flask-outline" class="h-4 w-4 shrink-0" />
+                  <span>{intern.focus}</span>
+                </div>
+              </div>
+
+              <span class="rounded-full border border-primary/20 bg-primary/10 px-2.5 py-1 text-[10px] font-semibold tracking-wide text-primary">
+                {intern.period}
+              </span>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+
+    <div class="mt-10">
+      <a
+        href="/people"
+        class="text-sm font-medium text-primary hover:underline"
+      >
+        Back to People
+      </a>
+    </div>
+  </div>
+</Layout>

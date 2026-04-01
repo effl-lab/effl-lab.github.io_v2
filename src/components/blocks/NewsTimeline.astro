@@ -1,0 +1,50 @@
+---
+import type { NewsEntry } from "@/pages/home/news/_types.mts";
+
+interface Props {
+  items: NewsEntry[];
+}
+
+const { items } = Astro.props;
+
+function getDateParts(date: string) {
+  const [primary, ...rest] = date.split(" ");
+
+  return {
+    primary,
+    secondary: rest.join(" "),
+  };
+}
+---
+
+<div
+  class="relative space-y-4 before:absolute before:top-5 before:bottom-5 before:left-[4.9rem] before:w-px before:bg-border/70 before:content-[''] md:before:left-[6.4rem]"
+>
+  {
+    items.map((item) => {
+      const date = getDateParts(item.date);
+
+      return (
+        <article class="grid grid-cols-[4.2rem_minmax(0,1fr)] items-start gap-4 md:grid-cols-[5.7rem_minmax(0,1fr)] md:gap-6">
+          <div class="relative z-10 rounded-[1.2rem] border border-emerald-900/10 bg-emerald-900/[0.06] px-2 py-3 text-center shadow-[0_10px_30px_-24px_rgba(6,78,59,0.45)]">
+            <div class="text-[11px] font-semibold tracking-[0.18em] text-emerald-900 uppercase">
+              {date.primary}
+            </div>
+            {date.secondary && (
+              <div class="mt-1 text-sm font-bold text-emerald-950">
+                {date.secondary}
+              </div>
+            )}
+          </div>
+
+          <div class="relative rounded-[1.5rem] border border-border/65 bg-card/95 px-5 py-4 shadow-[0_18px_50px_-36px_rgba(15,23,42,0.28)]">
+            <span class="absolute top-5 -left-[0.4rem] h-3 w-3 rounded-full border border-emerald-900/15 bg-emerald-900 shadow-[0_0_0_5px_rgba(255,255,255,0.92)]" />
+            <p class="text-sm leading-relaxed font-medium text-foreground md:text-[15px]">
+              {item.text}
+            </p>
+          </div>
+        </article>
+      );
+    })
+  }
+</div>

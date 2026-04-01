@@ -1,0 +1,39 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import EditPageLink from "@/components/layout/EditPageLink.astro";
+import { getJoinUsItems } from "./join-us/_data.mts";
+
+const joinPaths = getJoinUsItems();
+---
+
+<Layout title="Join Us" description="Ways to join EffL">
+  <div
+    class="animate-in fade-in slide-in-from-bottom-4 mx-auto max-w-5xl p-8 duration-700 md:p-16"
+  >
+    <EditPageLink />
+
+    <header class="mb-10">
+      <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Join Us</h2>
+    </header>
+
+    <div class="grid gap-4 md:grid-cols-2">
+      {
+        joinPaths.map((item) => (
+          <a
+            href={`/join-us/${item.slug}`}
+            class="group rounded-[1.5rem] border border-border/70 bg-card/90 p-6 shadow-[0_18px_60px_-36px_rgba(15,23,42,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/25 hover:shadow-[0_28px_70px_-40px_rgba(16,185,129,0.28)]"
+          >
+            <div class="space-y-2">
+              <div class="text-lg font-semibold tracking-tight text-foreground transition-colors group-hover:text-primary">
+                {item.title}
+              </div>
+              <p class="text-sm leading-relaxed text-muted-foreground">
+                {item.description}
+              </p>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</Layout>

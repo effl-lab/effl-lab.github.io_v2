@@ -1,22 +1,22 @@
 ---
 import { Icon } from "astro-icon/components";
-import site from "@/config/site";
+import homeHero from "@/pages/home/hero.mts";
 ---
 
 <section class="mb-16">
-  <h2 class="mb-6 text-3xl font-bold tracking-tight">{site.hero.greeting}</h2>
+  <h2 class="mb-6 text-3xl font-bold tracking-tight">{homeHero.greeting}</h2>
   <p
     class="text-lg leading-relaxed font-light text-muted-foreground"
-    set:html={site.hero.description}
+    set:html={homeHero.description}
   />
 </section>
 
 {
-  site.hero.cards.length > 0 && (
+  homeHero.cards.length > 0 && (
     <div class="mb-16 grid grid-cols-1 gap-4 md:grid-cols-2">
-      {site.hero.cards.map((card, i) => (
+      {homeHero.cards.map((card, i) => (
         <div
-          class="flex gap-4 rounded-2xl border border-border/50 bg-muted/30 p-5 transition-all duration-300 hover:border-primary/30 hover:bg-muted/40 hover:-translate-y-1"
+          class="flex gap-4 rounded-2xl border border-border/50 bg-muted/30 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-muted/40"
           style={`animation-delay: ${i * 100}ms`}
         >
           <div class="text-lg text-primary transition-transform duration-300 group-hover:scale-110">

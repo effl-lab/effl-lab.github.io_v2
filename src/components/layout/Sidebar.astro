@@ -4,21 +4,17 @@ import Nav from "./Nav.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 import { Icon } from "astro-icon/components";
 import Brand from "./Brand.astro";
-import SearchModal from "../blocks/SearchModal.astro";
-import SearchBox from "./SearchBox.astro";
 ---
 
 <aside
-  class="flex w-full flex-col border-b border-border bg-muted/20 p-6 md:w-[35%] md:border-r md:border-b-0 md:p-12"
+  class="flex w-full flex-col border-b border-border bg-muted/20 p-5 md:w-[29%] md:border-r md:border-b-0 md:p-8 lg:w-[27%] lg:p-9"
   data-pagefind-ignore="all"
 >
   <Brand />
 
-  <SearchBox />
-
   <Nav />
 
-  <div class="mt-8 flex items-center justify-between md:mt-14">
+  <div class="mt-6 flex items-center justify-between md:mt-10">
     <div class="flex gap-4 text-muted-foreground/60">
       {
         site.social.map((item) => (
@@ -35,6 +31,4 @@ import SearchBox from "./SearchBox.astro";
 
     <ThemeToggle />
   </div>
-
-  <SearchModal />
 </aside>

@@ -16,16 +16,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" href="/effl_logo.png?v=20260401" />
 
   <!-- Apple Touch Icon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-
-  <!-- PWA Icons -->
-  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
+  <link rel="apple-touch-icon" href="/effl_logo.png?v=20260401" />
 
   <!-- PWA Manifest -->
   <link rel="manifest" href="/manifest.json" />
@@ -56,23 +50,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <meta name="twitter:creator" content={`@${site.meta.author}`} />
   <meta name="twitter:image" content={new URL(image, Astro.url)} />
 
-  <!-- RSS Link -->
-  <link
-    rel="alternate"
-    type="application/rss+xml"
-    title={site.meta.title}
-    href={new URL("rss.xml", Astro.site)}
-  />
-
   <!-- canonical url -->
   <link rel="canonical" href={canonicalURL} />
 
   <!-- Sitemap -->
   <link rel="sitemap" href="/sitemap-index.xml" />
-
-  <!-- pagefind -->
-  <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
-  <script src="/pagefind/pagefind-ui.js" is:inline></script>
 
   <!-- font  -->
   <Font cssVariable="--font-display" preload />

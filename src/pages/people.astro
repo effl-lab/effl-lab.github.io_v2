@@ -1,0 +1,135 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import PersonCard from "@/components/people/PersonCard.astro";
+import EditPageLink from "@/components/layout/EditPageLink.astro";
+import { Icon } from "astro-icon/components";
+import type { PersonEntry, PersonGroup } from "./people/_types.mts";
+
+// Add person files in `src/pages/people/*.mts`.
+// Each file should export a default `PersonEntry`.
+const peopleModules = import.meta.glob<{ default?: PersonEntry }>(
+  "./people/*.mts",
+  { eager: true },
+);
+
+const groupOrder: Record<PersonGroup, number> = {
+  pi: 0,
+  phd: 1,
+  ms: 2,
+  staff: 3,
+};
+
+const people = Object.values(peopleModules)
+  .flatMap((module, index) => {
+    const path = Object.keys(peopleModules)[index] ?? "";
+
+    if (path.endsWith("/example.mts")) {
+      return [];
+    }
+
+    return module.default ? [module.default] : [];
+  })
+  .sort(
+    (a, b) =>
+      groupOrder[a.group] - groupOrder[b.group] ||
+      (a.order ?? Number.MAX_SAFE_INTEGER) -
+        (b.order ?? Number.MAX_SAFE_INTEGER) ||
+      a.name.localeCompare(b.name),
+  );
+
+const sections: Array<{ group: PersonGroup; title: string }> = [
+  { group: "pi", title: "Principal Investigator" },
+  { group: "phd", title: "Ph.D. track" },
+  { group: "ms", title: "M.S. track" },
+  { group: "staff", title: "Staff" },
+];
+---
+
+<Layout
+  title="People"
+  description="People at EffL, including the principal investigator and student researchers."
+>
+  <div
+    class="animate-in fade-in slide-in-from-bottom-4 mx-auto max-w-4xl p-8 duration-700 md:p-16"
+  >
+    <EditPageLink />
+
+    <header class="mb-16">
+      <h2 class="mb-4 text-3xl font-bold tracking-tight">People</h2>
+    </header>
+
+    <div class="space-y-14">
+      {
+        sections.map((section) => {
+          const sectionPeople = people.filter(
+            (person) => person.group === section.group,
+          );
+
+          return (
+            <section class="space-y-5">
+              <div class="border-b border-border/60 pb-3">
+                <h3 class="text-lg font-bold tracking-tight">
+                  {section.title}
+                </h3>
+              </div>
+
+              {sectionPeople.length === 0 ? (
+                <div class="rounded-2xl border border-dashed border-border/60 bg-muted/10 px-5 py-6">
+                  <p class="text-sm text-muted-foreground">No members yet.</p>
+                </div>
+              ) : (
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                  {sectionPeople.map((person) => (
+                    <PersonCard person={person} />
+                  ))}
+                </div>
+              )}
+            </section>
+          );
+        })
+      }
+    </div>
+
+    <section class="mt-16 space-y-5">
+      <div class="border-b border-border/60 pb-3">
+        <h3 class="text-lg font-bold tracking-tight">More People</h3>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <a
+          href="/people/interns"
+          class="group flex items-center justify-between rounded-2xl border border-border/60 bg-muted/10 px-5 py-4 transition-all duration-300 hover:border-primary/30 hover:bg-muted/30"
+        >
+          <div>
+            <h4 class="text-sm font-bold text-foreground">Interns</h4>
+            <p class="mt-1 text-xs text-muted-foreground">
+              View interns and short-term researchers.
+            </p>
+          </div>
+          <span
+            class="text-primary transition-transform duration-300 group-hover:translate-x-1"
+          >
+            <Icon name="mdi:arrow-right" class="h-5 w-5" />
+          </span>
+        </a>
+
+        <a
+          href="/people/alumni"
+          class="group flex items-center justify-between rounded-2xl border border-border/60 bg-muted/10 px-5 py-4 transition-all duration-300 hover:border-primary/30 hover:bg-muted/30"
+        >
+          <div>
+            <h4 class="text-sm font-bold text-foreground">Alumni</h4>
+            <p class="mt-1 text-xs text-muted-foreground">
+              View former lab members and graduates.
+            </p>
+          </div>
+          <span
+            class="text-primary transition-transform duration-300 group-hover:translate-x-1"
+          >
+            <Icon name="mdi:arrow-right" class="h-5 w-5" />
+          </span>
+        </a>
+      </div>
+    </section>
+  </div>
+</Layout>

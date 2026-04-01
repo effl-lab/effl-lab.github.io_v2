@@ -1,0 +1,67 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="36" fill="#F4FBF8"/>
+  <rect x="28" y="28" width="1144" height="664" rx="28" fill="url(#bg)"/>
+  <rect x="74" y="80" width="1052" height="560" rx="24" fill="#FCFEFD" stroke="#D7EFE6" stroke-width="2"/>
+
+  <text x="108" y="136" fill="#0F5132" font-family="Arial, sans-serif" font-size="34" font-weight="700">
+    Generalization vs Feature Learning Strength
+  </text>
+  <text x="108" y="174" fill="#557B68" font-family="Arial, sans-serif" font-size="20">
+    Representative figure for “Over-Alignment vs Over-Fitting”
+  </text>
+
+  <line x1="152" y1="548" x2="1036" y2="548" stroke="#B5DCCB" stroke-width="4" stroke-linecap="round"/>
+  <line x1="152" y1="548" x2="152" y2="226" stroke="#B5DCCB" stroke-width="4" stroke-linecap="round"/>
+
+  <text x="82" y="238" fill="#6A8D7C" font-family="Arial, sans-serif" font-size="18" font-weight="600" transform="rotate(-90 82 238)">
+    Generalization
+  </text>
+  <text x="748" y="604" fill="#6A8D7C" font-family="Arial, sans-serif" font-size="18" font-weight="600">
+    Feature Learning Strength
+  </text>
+
+  <path d="M168 510C274 492 332 450 402 398C456 358 540 308 628 292C717 276 796 294 864 334C922 368 975 414 1030 474" stroke="#16A34A" stroke-width="10" stroke-linecap="round"/>
+  <path d="M168 492C250 438 332 392 428 344C524 296 620 274 718 292C810 308 892 356 1030 466" stroke="#F59E0B" stroke-width="10" stroke-linecap="round" stroke-dasharray="16 14"/>
+  <path d="M168 468C278 382 388 326 514 286C640 246 792 258 1030 430" stroke="#0F766E" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
+
+  <circle cx="628" cy="292" r="16" fill="#16A34A"/>
+  <circle cx="628" cy="292" r="30" fill="#16A34A" fill-opacity="0.14"/>
+  <line x1="628" y1="292" x2="788" y2="206" stroke="#16A34A" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 8"/>
+
+  <rect x="784" y="148" width="260" height="108" rx="20" fill="#F3FBF6" stroke="#CAE9D8" stroke-width="2"/>
+  <text x="812" y="188" fill="#0F5132" font-family="Arial, sans-serif" font-size="22" font-weight="700">
+    Best generalization
+  </text>
+  <text x="812" y="219" fill="#557B68" font-family="Arial, sans-serif" font-size="18">
+    Balanced feature learning
+  </text>
+
+  <rect x="780" y="330" width="270" height="136" rx="20" fill="#FFFBF1" stroke="#F6D78B" stroke-width="2"/>
+  <text x="808" y="372" fill="#9A5B00" font-family="Arial, sans-serif" font-size="24" font-weight="700">
+    Over-alignment
+  </text>
+  <text x="808" y="405" fill="#A36D1D" font-family="Arial, sans-serif" font-size="18">
+    Strong alignment can hurt
+  </text>
+  <text x="808" y="430" fill="#A36D1D" font-family="Arial, sans-serif" font-size="18">
+    downstream generalization
+  </text>
+
+  <rect x="230" y="276" width="230" height="122" rx="20" fill="#F0FDFA" stroke="#9FE3DA" stroke-width="2"/>
+  <text x="258" y="318" fill="#115E59" font-family="Arial, sans-serif" font-size="24" font-weight="700">
+    Under-fitting
+  </text>
+  <text x="258" y="350" fill="#387A74" font-family="Arial, sans-serif" font-size="18">
+    Weak feature learning
+  </text>
+  <text x="258" y="375" fill="#387A74" font-family="Arial, sans-serif" font-size="18">
+    limits transfer
+  </text>
+
+  <defs>
+    <linearGradient id="bg" x1="112" y1="72" x2="1084" y2="648" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9F7F1"/>
+      <stop offset="1" stop-color="#FDFDFB"/>
+    </linearGradient>
+  </defs>
+</svg>

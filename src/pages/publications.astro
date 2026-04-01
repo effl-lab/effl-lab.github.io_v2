@@ -1,0 +1,401 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import EditPageLink from "@/components/layout/EditPageLink.astro";
+import { Icon } from "astro-icon/components";
+import type { PaperEntry, PaperResource } from "./publications/_types.mts";
+
+const paperModules = import.meta.glob<{ default: PaperEntry }>(
+  "./publications/**/*.paper.mts",
+  { eager: true },
+);
+
+function pushUnique(items: string[], value: string) {
+  const normalized = value.trim();
+
+  if (normalized && !items.includes(normalized)) {
+    items.push(normalized);
+  }
+}
+
+function splitBadgeSegments(value: string) {
+  return value
+    .split(",")
+    .map((segment) => segment.trim())
+    .filter(Boolean);
+}
+
+function getVenueBadges(paper: PaperEntry) {
+  const extras: string[] = [];
+  const venue = paper.venue.trim();
+  const strippedVenue = venue.replace(/\s*\([^()]*\)/g, "").trim();
+
+  const yearMatch = /\b(19|20)\d{2}\b/.exec(strippedVenue);
+  let venueLabel = strippedVenue;
+
+  if (/^arxiv\b/i.test(strippedVenue)) {
+    venueLabel = "arXiv";
+  } else if (yearMatch && typeof yearMatch.index === "number") {
+    venueLabel =
+      strippedVenue.slice(0, yearMatch.index).trim() || strippedVenue;
+    const suffix = strippedVenue
+      .slice(yearMatch.index + yearMatch[0].length)
+      .trim();
+
+    splitBadgeSegments(suffix).forEach((segment) =>
+      pushUnique(extras, segment),
+    );
+  }
+
+  const parentheticalMatches = venue.match(/\(([^()]+)\)/g) ?? [];
+  parentheticalMatches
+    .map((match) => match.slice(1, -1))
+    .forEach((match) => {
+      splitBadgeSegments(match).forEach((segment) =>
+        pushUnique(extras, segment),
+      );
+    });
+
+  (paper.highlights ?? []).forEach((highlight) =>
+    pushUnique(extras, highlight),
+  );
+
+  const filteredExtras = extras.filter(
+    (extra) => !/^top\s+\d+(\.\d+)?%$/i.test(extra),
+  );
+
+  return {
+    venue: venueLabel,
+    extras: filteredExtras,
+  };
+}
+
+function getResourceIcon(resource: PaperResource) {
+  if (resource.icon) return resource.icon;
+
+  const label = resource.label.toLowerCase();
+
+  if (label.includes("project")) return "mdi:web";
+  if (label.includes("dataset")) return "mdi:database-outline";
+  if (label.includes("demo")) return "mdi:play-box-outline";
+  if (resource.href?.includes("github.com")) return "mdi:github";
+  if (label.includes("code")) return "mdi:code-braces";
+
+  return "mdi:link-variant";
+}
+
+function getPaperResources(paper: PaperEntry) {
+  const legacyResources = (paper.notes ?? []).map((label) => ({ label }));
+  const resources = [...legacyResources, ...(paper.resources ?? [])];
+  const deduped: PaperResource[] = [];
+
+  resources.forEach((resource) => {
+    const key = `${resource.label}::${resource.href ?? ""}`;
+    const alreadyExists = deduped.some(
+      (item) => `${item.label}::${item.href ?? ""}` === key,
+    );
+
+    if (!alreadyExists) {
+      deduped.push({
+        ...resource,
+        icon: getResourceIcon(resource),
+      });
+    }
+  });
+
+  return deduped;
+}
+
+function resolveSectionPapers(folder: string) {
+  return Object.entries(paperModules)
+    .filter(([path, module]) => {
+      if (!module?.default) return false;
+
+      return path.startsWith(`./publications/${folder}/`);
+    })
+    .sort(([pathA], [pathB]) => pathA.localeCompare(pathB))
+    .map(([, module]) => module.default);
+}
+
+const sections = [
+  {
+    id: "section-preprints",
+    title: "Preprints",
+    folder: "preprints",
+  },
+  {
+    id: "section-2026",
+    title: "2026",
+    folder: "2026",
+  },
+  {
+    id: "section-2025",
+    title: "2025",
+    folder: "2025",
+  },
+  {
+    id: "section-2024",
+    title: "2024",
+    folder: "2024",
+  },
+  {
+    id: "section-2023",
+    title: "2023",
+    folder: "2023",
+  },
+  {
+    id: "section-2022",
+    title: "2022",
+    folder: "2022",
+  },
+  {
+    id: "section-2021",
+    title: "2021",
+    folder: "2021",
+  },
+  {
+    id: "section-2020",
+    title: "2020",
+    folder: "2020",
+  },
+  {
+    id: "section-pre-2020",
+    title: "Pre-2020",
+    folder: "pre-2020",
+  },
+  {
+    id: "section-domestic-posters",
+    title: "Domestic Posters",
+    folder: "domestic-posters",
+  },
+].map((section) => ({
+  ...section,
+  papers: resolveSectionPapers(section.folder),
+}));
+
+const totalPapers = sections.reduce(
+  (count, section) => count + section.papers.length,
+  0,
+);
+---
+
+<Layout
+  title="Publications"
+  description={`Published papers and preprints — ${totalPapers} item${totalPapers === 1 ? "" : "s"}.`}
+>
+  <div
+    class="animate-in fade-in slide-in-from-bottom-4 mx-auto max-w-7xl p-9 duration-700 md:px-20 md:py-16 lg:px-24"
+  >
+    <EditPageLink />
+
+    <div class="lg:grid lg:grid-cols-[minmax(0,1fr)_max-content] lg:gap-8">
+      <div>
+        <header class="mb-12">
+          <h2 class="text-3xl font-bold tracking-tight md:text-4xl">
+            Publications
+          </h2>
+        </header>
+
+        <div class="space-y-10">
+          {
+            sections.map((section) => (
+              <section
+                id={section.id}
+                data-publication-section
+                class="scroll-mt-6 border-t border-border/60 pt-8 first:border-t-0 first:pt-0"
+              >
+                <div class="mb-5">
+                  <h3 class="text-lg font-bold tracking-tight">
+                    {section.title}
+                  </h3>
+                </div>
+
+                {section.papers.length === 0 ? (
+                  <div class="rounded-[1.2rem] border border-dashed border-border/70 bg-muted/10 px-5 py-6">
+                    <p class="text-sm text-muted-foreground">No papers yet.</p>
+                  </div>
+                ) : (
+                  <div class="space-y-4">
+                    {section.papers.map((paper) => (
+                      <article class="group relative overflow-hidden rounded-[1.5rem] border border-border/70 bg-card/95 p-4 shadow-[0_18px_60px_-32px_rgba(15,23,42,0.35)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/25 hover:shadow-[0_28px_70px_-35px_rgba(16,185,129,0.25)] md:p-5">
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.10),transparent_38%),linear-gradient(180deg,rgba(255,255,255,0.02),transparent)] opacity-80" />
+
+                        <div class="relative flex h-full flex-col gap-3">
+                          <div class="space-y-2">
+                            <div class="flex flex-wrap items-start justify-between gap-3">
+                              <div class="flex flex-wrap items-center gap-2">
+                                <span class="inline-flex items-center rounded-full border border-primary/15 bg-primary/10 px-2.5 py-1 text-[10px] font-semibold text-primary">
+                                  {getVenueBadges(paper).venue}
+                                </span>
+                              </div>
+
+                              {getVenueBadges(paper).extras.length > 0 && (
+                                <div class="flex flex-wrap justify-end gap-2">
+                                  {getVenueBadges(paper).extras.map((extra) => (
+                                    <span class="inline-flex items-center rounded-full border border-emerald-900/10 bg-emerald-900/[0.06] px-2.5 py-1 text-[10px] font-medium text-emerald-900">
+                                      {extra}
+                                    </span>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+
+                            <h4 class="text-sm leading-snug font-bold text-foreground md:text-[15px]">
+                              {paper.link ? (
+                                <a
+                                  href={paper.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  class="inline-flex items-start gap-2 decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:underline"
+                                >
+                                  <span>{paper.title}</span>
+                                  <Icon
+                                    name="mdi:open-in-new"
+                                    class="mt-1 h-4 w-4 shrink-0 text-primary/80"
+                                  />
+                                </a>
+                              ) : (
+                                <span>{paper.title}</span>
+                              )}
+                            </h4>
+
+                            <p class="text-xs leading-relaxed text-foreground/82">
+                              {paper.authors.join(", ")}
+                            </p>
+
+                            {getPaperResources(paper).length > 0 && (
+                              <div class="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-border/60 pt-3">
+                                {getPaperResources(paper).map((resource) =>
+                                  resource.href ? (
+                                    <a
+                                      href={resource.href}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      class="inline-flex items-center gap-1.5 text-[11px] font-medium text-muted-foreground transition-colors hover:text-primary"
+                                    >
+                                      <Icon
+                                        name={
+                                          resource.icon ?? "mdi:link-variant"
+                                        }
+                                        class="h-4 w-4 shrink-0"
+                                      />
+                                      <span>{resource.label}</span>
+                                    </a>
+                                  ) : (
+                                    <span class="inline-flex items-center gap-1.5 text-[11px] font-medium text-muted-foreground/75">
+                                      <Icon
+                                        name={
+                                          resource.icon ?? "mdi:link-variant"
+                                        }
+                                        class="h-4 w-4 shrink-0"
+                                      />
+                                      <span>{resource.label}</span>
+                                    </span>
+                                  ),
+                                )}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                )}
+              </section>
+            ))
+          }
+        </div>
+      </div>
+
+      <aside class="hidden lg:block lg:justify-self-end">
+        <div
+          class="sticky top-8 w-max rounded-[1.2rem] border border-border/70 bg-card/80 p-2 shadow-[0_18px_60px_-36px_rgba(15,23,42,0.35)] backdrop-blur"
+        >
+          <div
+            class="mb-2 px-2 text-[11px] font-semibold tracking-[0.18em] text-muted-foreground uppercase"
+          >
+            Sections
+          </div>
+          <nav class="space-y-2">
+            {
+              sections.map((section) => (
+                <a
+                  href={`#${section.id}`}
+                  data-publication-section-link
+                  data-active="false"
+                  class="block rounded-xl border border-transparent px-2.5 py-2 text-sm whitespace-nowrap text-muted-foreground transition-colors hover:border-primary/15 hover:bg-primary/8 hover:text-primary"
+                >
+                  <span>{section.title}</span>
+                </a>
+              ))
+            }
+          </nav>
+        </div>
+      </aside>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  [data-publication-section-link][data-active="true"] {
+    font-weight: 700;
+    color: var(--color-foreground);
+  }
+</style>
+
+<script is:inline>
+  if (!window.__efflPublicationSectionNavBound) {
+    window.__efflPublicationSectionNavBound = true;
+
+    const sectionLinks = Array.from(
+      document.querySelectorAll("[data-publication-section-link]"),
+    );
+    const sections = Array.from(
+      document.querySelectorAll("[data-publication-section]"),
+    );
+
+    const setActiveLink = (id) => {
+      sectionLinks.forEach((link) => {
+        const href = link.getAttribute("href")?.slice(1);
+        link.dataset.active = String(href === id);
+      });
+    };
+
+    if (sections.length > 0) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const visibleEntries = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+          if (visibleEntries.length > 0) {
+            const activeId = visibleEntries[0]?.target.id;
+            if (activeId) {
+              setActiveLink(activeId);
+            }
+          }
+        },
+        {
+          rootMargin: "-20% 0px -55% 0px",
+          threshold: [0.1, 0.25, 0.4, 0.6],
+        },
+      );
+
+      sections.forEach((section) => observer.observe(section));
+      setActiveLink(sections[0]?.id ?? "");
+    }
+
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest("[data-publication-section-link]");
+      if (!(link instanceof HTMLAnchorElement)) return;
+
+      const id = link.getAttribute("href")?.slice(1);
+      const target = id ? document.getElementById(id) : null;
+      if (!target) return;
+
+      event.preventDefault();
+      setActiveLink(id);
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      history.replaceState(null, "", `#${id}`);
+    });
+  }
+</script>

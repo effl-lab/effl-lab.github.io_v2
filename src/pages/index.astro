@@ -1,17 +1,21 @@
 ---
-import Hero from "@/components/blocks/Hero.astro";
-import RecentPosts from "@/components/blocks/RecentPosts.astro";
-import Footer from "@/components/layout/Footer.astro";
-import site from "@/config/site";
-import Layout from "@/layouts/Layout.astro";
+
 ---
 
-<Layout title={site.meta.title} description={site.meta.description}>
-  <div
-    class="animate-in fade-in slide-in-from-bottom-4 mx-auto max-w-2xl p-8 md:p-16"
-  >
-    <Hero />
-
-    <RecentPosts />
-  </div>
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0;url=/home" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting to Home</title>
+    <link rel="canonical" href="/home" />
+    <script is:inline>
+      window.location.replace("/home");
+    </script>
+  </head>
+  <body>
+    <p>
+      Redirecting to <a href="/home">/home</a>...
+    </p>
+  </body>
+</html>
