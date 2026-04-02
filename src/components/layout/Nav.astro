@@ -6,18 +6,20 @@ const currentPath = Astro.url.pathname;
 ---
 
 <nav
-  class="no-scrollbar flex flex-1 flex-nowrap justify-center gap-3 overflow-x-auto md:flex-col md:justify-start md:gap-3 md:overflow-x-visible"
+  class="flex flex-1 flex-nowrap justify-center gap-2 overflow-hidden md:flex-col md:justify-start md:gap-3"
 >
   {
     site.navigation.map((item) => {
       const isActive =
         currentPath === item.href ||
         (item.href !== "/" && currentPath.startsWith(item.href));
+      const mobileFlex = Math.max(5, item.name.length);
       return (
         <a
           href={item.href}
+          style={`--mobile-flex:${mobileFlex};`}
           class:list={[
-            "group flex min-w-24 items-center justify-center rounded-2xl border border-transparent px-3 py-2.5 text-center transition-all md:min-w-0 md:justify-between md:py-3 md:text-left",
+            "nav-item group flex min-w-0 items-center justify-center rounded-2xl border border-transparent px-2.5 py-2.5 text-center transition-all md:min-w-0 md:justify-between md:px-3 md:py-3 md:text-left",
             isActive
               ? "border-primary/20 bg-primary/10 md:hover:border-primary/20 md:hover:bg-primary/15"
               : "hover:bg-muted/50",
@@ -26,7 +28,7 @@ const currentPath = Astro.url.pathname;
           <div class="flex flex-col items-center text-center md:items-start md:text-left">
             <span
               class:list={[
-                "text-sm font-bold",
+                "text-[13px] leading-tight font-black whitespace-nowrap md:text-sm",
                 isActive
                   ? "text-primary"
                   : "text-muted-foreground group-hover:text-primary",
@@ -60,3 +62,11 @@ const currentPath = Astro.url.pathname;
     })
   }
 </nav>
+
+<style>
+  @media (max-width: 767px) {
+    .nav-item {
+      flex: var(--mobile-flex) 1 0%;
+    }
+  }
+</style>
