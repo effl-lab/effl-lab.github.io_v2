@@ -1,8 +1,7 @@
 import type { PaperEntry } from "../_types.mts";
 
 const paper: PaperEntry = {
-  title:
-    "Post-training Quantization of Vision Encoders Needs Prefixing Registers",
+  title: "Activation Quantization of Vision Encoders Needs Prefixing Registers",
   authors: [
     "Seunghyeon Kim",
     "Jinho Kim",

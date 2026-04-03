@@ -1,25 +1,6 @@
 @import "tailwindcss";
 
-/*
- * Theme Color Customization
- * -------------------------
- * All colors are based on OKLch color space with a consistent hue value.
- * To change the entire color palette, find-and-replace the hue number:
- *
- *   Current hue: 165 (sage green)
- *
- * Preset hue values:
- *   165 = Sage Green (default)
- *   250 = Ocean Blue
- *   280 = Lavender Purple
- *   330 = Rose Pink
- *    30 = Warm Orange
- *    45 = Golden Yellow
- *   200 = Teal
- */
-
 :root {
-  /* --- Sage Mist --- */
   --background: oklch(0.98 0.008 165);
   --foreground: oklch(0.25 0.02 165);
 

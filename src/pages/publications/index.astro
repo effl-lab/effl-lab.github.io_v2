@@ -3,6 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import EditPageLink from "@/components/layout/EditPageLink.astro";
 import { Icon } from "astro-icon/components";
 import type { PaperEntry, PaperResource } from "./_types.mts";
+import { publicationOrder } from "./_order.mts";
 
 const paperModules = import.meta.glob<{ default: PaperEntry }>(
   "./**/*.paper.mts",
@@ -105,14 +106,38 @@ function getPaperResources(paper: PaperEntry) {
   return deduped;
 }
 
+function getPaperFileName(path: string) {
+  return path.split("/").pop() ?? path;
+}
+
 function resolveSectionPapers(folder: string) {
+  const sectionOrder =
+    publicationOrder[folder as keyof typeof publicationOrder] ?? [];
+  const rankMap = new Map(
+    sectionOrder.map((fileName, index) => [fileName, index] as const),
+  );
+
   return Object.entries(paperModules)
     .filter(([path, module]) => {
       if (!module?.default) return false;
 
       return path.startsWith(`./${folder}/`);
     })
-    .sort(([pathA], [pathB]) => pathA.localeCompare(pathB))
+    .sort(([pathA], [pathB]) => {
+      const fileNameA = getPaperFileName(pathA);
+      const fileNameB = getPaperFileName(pathB);
+      const rankA = rankMap.get(fileNameA);
+      const rankB = rankMap.get(fileNameB);
+
+      if (rankA !== undefined && rankB !== undefined) {
+        return rankA - rankB;
+      }
+
+      if (rankA !== undefined) return -1;
+      if (rankB !== undefined) return 1;
+
+      return fileNameA.localeCompare(fileNameB);
+    })
     .map(([, module]) => module.default);
 }
 

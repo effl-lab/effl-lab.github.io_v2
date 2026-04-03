@@ -4,9 +4,6 @@ import PersonCard from "@/components/people/PersonCard.astro";
 import EditPageLink from "@/components/layout/EditPageLink.astro";
 import { Icon } from "astro-icon/components";
 import type { PersonEntry, PersonGroup } from "./members/_types.mts";
-
-// Add person files in `src/pages/people/members/*.mts`.
-// Each file should export a default `PersonEntry`.
 const peopleModules = import.meta.glob<{ default?: PersonEntry }>(
   "./members/*.mts",
   { eager: true },
