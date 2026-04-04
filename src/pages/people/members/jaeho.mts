@@ -9,7 +9,7 @@ const jaeho: PersonEntry = {
   bio: "Associate Professor @ POSTECH EE, Ex-Googler (2023-2025)",
   avatar: jaehoPhoto,
   status: "P.I.",
-  tags: [],
+  tags: ["Learning theory", "Efficient AI"],
   links: [
     {
       label: "Webpage",
