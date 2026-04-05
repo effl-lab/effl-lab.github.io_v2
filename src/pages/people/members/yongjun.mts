@@ -6,7 +6,7 @@ const yongjun: PersonEntry = {
   order: 6,
   name: "Yongjun Kim",
   role: "Improving reasoning models with test-time intervention"
-  bio: "bio: Interested in improving intelligence in test-time (e.g., test-time scaling, test-time training)",
+  bio: "Interested in improving intelligence in test-time (e.g., test-time scaling, test-time training)",
   avatar: yongjunPhoto,
   status: "M.S.+Ph.D.",
   tags: ["Large Language Models", "Test-Time Scaling"],
