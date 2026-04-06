@@ -6,7 +6,7 @@ const minsu: PersonEntry = {
   order: 4,
   name: "Minsoo Lee",
   role: "Efficient Image Enhancement in Extreme Adverse Conditions 🌌",
-  bio: "Adapting efficient machine learning to military field, "Fight tonight"",
+  bio: 'Adapting efficient machine learning to military field, "Fight tonight"',
   avatar: minsuPhoto,
   status: "M.S.",
   tags: ["Computer Vision", "Denoising"],
