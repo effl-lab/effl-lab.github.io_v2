@@ -6,7 +6,7 @@ const hyunjong: PersonEntry = {
   order: 3,
   name: "Hyunjong Ok",
   role: "Advancing Audio Technologies for Multimodal Intelligence 🔈",
-  bio: "M.S.+Ph.D. @ POSTECH AI (24.02--).",
+  bio: "Diagnostic Evaluation of Multimodal AI",
   avatar: hyunjongPhoto,
   status: "M.S.+Ph.D.",
   tags: ["Efficient LLMs", "Multimodal Learning", "Audio Technologies"],
