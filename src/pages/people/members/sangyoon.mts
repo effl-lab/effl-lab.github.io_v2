@@ -5,11 +5,11 @@ const sangyoon: PersonEntry = {
   group: "phd",
   order: 1,
   name: "Sangyoon Lee",
-  role: "Hyperefficient Neural Fields ⚡️",
-  bio: "M.S.+Ph.D. @ POSTECH AI (24.02--).",
+  role: "Exploiting Discrete Vision Tokenization for MLLMs",
+  bio: "Aligning modality-specific features into a unified space to empower AI with a deeper and more efficient multimodal understanding.",
   avatar: sangyoonPhoto,
   status: "M.S.+Ph.D.",
-  tags: ["Fast Neural Fields", "Editable Neural Fields", "Neural Compression"],
+  tags: ["Discrete Tokenization", "Unified Multimodal LLMs", "Fast Neural Fields"],
   links: [
     {
       label: "Webpage",
