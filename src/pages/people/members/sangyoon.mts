@@ -6,7 +6,7 @@ const sangyoon: PersonEntry = {
   order: 1,
   name: "Sangyoon Lee",
   role: "Exploiting Discrete Vision Tokenization for MLLMs",
-  bio: "Aligning modality-specific features into a unified space to empower AI with a deeper and more efficient multimodal understanding.",
+  bio: "Unifying modality-specific features to enable more efficient and deeper multimodal intelligence.",
   avatar: sangyoonPhoto,
   status: "M.S.+Ph.D.",
   tags: ["Discrete Tokenization", "Unified Multimodal LLMs", "Fast Neural Fields"],
