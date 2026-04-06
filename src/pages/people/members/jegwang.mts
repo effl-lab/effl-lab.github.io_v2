@@ -12,14 +12,14 @@ const jegwang: PersonEntry = {
   tags: ["Model compression", "Efficient LLMs", "Accelerated Training"],
   links: [
     {
-      label: "LinkedIn",
-      href: "www.linkedin.com/in/jegwang-ryu-179b63269",
-      icon: "mdi:linkedin",
-    },
-    {
       label: "Mail",
       href: "mailto:jegwang.ryu@postech.ac.kr",
       icon: "mdi:email-outline",
+    },
+    {
+      label: "LinkedIn",
+      href: "www.linkedin.com/in/jegwang-ryu-179b63269",
+      icon: "mdi:linkedin",
     },
     {
       label: "Scholar",
