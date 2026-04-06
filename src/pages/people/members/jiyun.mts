@@ -6,7 +6,7 @@ const jiyun: PersonEntry = {
   order: 4,
   name: "Jiyun Bae",
   role: "Robustness of Reasoning Vision-Language Models 🕶️",
-  bio: "Ph.D. @ POSTECH AI (26.02--). Academic Team Lead @ EffL.",
+  bio: "Aspiring to build AI systems that perceive the visual world as faithfully as they reason about it.",
   avatar: jiyunPhoto,
   status: "Ph.D.",
   tags: ["Vision-Language Models", "Trustworthiness", "Robustness"],
