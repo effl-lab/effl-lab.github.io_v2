@@ -18,7 +18,7 @@ const jegwang: PersonEntry = {
     },
     {
       label: "LinkedIn",
-      href: "www.linkedin.com/in/jegwang-ryu-179b63269",
+      href: "https://linkedin.com/in/jegwang-ryu-179b63269",
       icon: "mdi:linkedin",
     },
     {
