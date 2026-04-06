@@ -17,9 +17,9 @@ const sangbeom: PersonEntry = {
       icon: "mdi:web",
     },
     {
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/in/sangbeom-ha-81658b1a2/",
-      icon: "mdi:linkedin",
+      label: "Mail",
+      href: "mailto:sangbeomha@postech.ac.kr",
+      icon: "mdi:email-outline",
     },
   ],
 };
