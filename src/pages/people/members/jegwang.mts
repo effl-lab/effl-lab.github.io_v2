@@ -5,11 +5,11 @@ const jegwang: PersonEntry = {
   group: "ms",
   order: 1,
   name: "Jegwang Ryu",
-  role: "Compression in the Neural Network Weight Space 💾",
-  bio: "M.S. @ POSTECH EE (24.09--).",
+  role: "Uncertainty Quantification in Large-Scale Models",
+  bio: "Developing efficient and reliable AI sysyem for real-world applications",
   avatar: jegwangPhoto,
   status: "M.S.",
-  tags: ["Compressing Large-scale Models", "Efficient LLMs", "Accelerated Training"],
+  tags: ["Model compression", "Efficient LLMs", "Accelerated Training"],
   links: [
     {
       label: "LinkedIn",
