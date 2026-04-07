@@ -9,7 +9,8 @@ export const publicationOrder = {
     "specetd.paper.mts",
     "lipo.paper.mts",
     "auditorybench-plus-plus.paper.mts",
-    "iterquant.paper.mts"],
+    "iterquant.paper.mts",
+  ],
   "2025": [
     "s2cap.paper.mts",
     "imagine-to-hear.paper.mts",
