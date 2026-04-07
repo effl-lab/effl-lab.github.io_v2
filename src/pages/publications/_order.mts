@@ -1,13 +1,15 @@
 export const publicationOrder = {
   preprints: [
     "over-alignment-vs-over-fitting.paper.mts",
-    "lost-in-the-prompt-order.paper.mts",
     "do-reasoning-vlms-inversely-scale.paper.mts",
     "neural-weight-compression-for-language-models.paper.mts",
     "post-training-quantization-of-vision-encoders-needs-prefixing-registers.paper.mts",
-    "speculative-end-turn-detector.paper.mts",
   ],
-  "2026": ["auditorybench-plus-plus.paper.mts", "iterquant.paper.mts"],
+  "2026": [
+    "specetd.paper.mts",
+    "lipo.paper.mts",
+    "auditorybench-plus-plus.paper.mts",
+    "iterquant.paper.mts"],
   "2025": [
     "s2cap.paper.mts",
     "imagine-to-hear.paper.mts",
