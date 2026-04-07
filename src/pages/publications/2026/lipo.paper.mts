@@ -7,6 +7,7 @@ const paper: PaperEntry = {
   venue: "ACL Findings 2026",
   link: "https://arxiv.org/abs/2601.14152",
   year: "2026",
+  badge: "Conference",
 };
 
 export default paper;
