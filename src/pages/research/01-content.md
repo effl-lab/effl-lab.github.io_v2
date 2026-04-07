@@ -16,9 +16,9 @@ Through theories, we seek to characterize such tradeoffs; through algorithms, we
 Here are some examples of our recent projects:
 
 - **Speed, accuracy, and initialization.** We characterize how the initialization scale affects the generalizability and training speed of neural networks ([A](https://arxiv.org/abs/2602.00827),[B](https://openreview.net/forum?id=Sr5XaZzirA)).
-- **Attention bias for Quantization.** We exploit the "attention sink" phenomenon to mitigate outliers in LLMs/VLMs, so that they can be quantized to low bitwidths ([A](https://arxiv.org/abs/2510.04547), [B](https://arxiv.org/abs/2406.12016)).
-- **On-Device LMs with Auditory Commonsense.** We reveal that on-device LMs often lack auditory commonsense through our new benchmark, and develop methods to equip the models with such knowledge ([A](https://arxiv.org/abs/2509.17641), [B](https://aclanthology.org/2025.findings-acl.730/), [C](https://arxiv.org/abs/2409.08199)).
-- **Layer-adaptive Compression of Deep Nets.** We devise algorithms to compress neural networks in a way that reflects the distinct roles of each layers ([A](https://arxiv.org/abs/2502.04348), [B](https://openreview.net/forum?id=H6ATjJ0TKdf)).
+- **Adaptation for compression.** We develop techniques to improve the performance of compressed models by tuning the models pre- or post-compression ([A](https://arxiv.org/abs/2510.04547), [B](https://arxiv.org/abs/2406.12016)).
+- **On-Device LMs that can hear.** We reveal that on-device LMs often lack auditory commonsense through our new benchmark, and develop methods to equip the models with such knowledge ([A](https://arxiv.org/abs/2509.17641), [B](https://aclanthology.org/2025.findings-acl.730/), [C](https://arxiv.org/abs/2409.08199)).
+- **Variable-rate compression of deep nets.** We devise algorithms to compress neural networks in a way that reflects the distinct roles of each layers ([A](https://arxiv.org/abs/2502.04348), [B](https://openreview.net/forum?id=H6ATjJ0TKdf)).
 - **Neural codec for model weights.** We develop neural data compression algorithms for neural network weights, with applications in LLMs or neural fields ([A](https://arxiv.org/abs/2510.11234), [B](https://arxiv.org/abs/2402.05965), [C](https://openreview.net/forum?id=bBXCCSoVQZ), [D](https://openreview.net/forum?id=Tn0PnRY877g))
 
 ---
