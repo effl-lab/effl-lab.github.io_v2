@@ -18,7 +18,7 @@ const seunghyeon: PersonEntry = {
     },
     {
       label: "Linkedin",
-      href: "www.linkedin.com/in/seunghyun-kim-34b412244",
+      href: "www.linkedin.com/in/seunghyeon-kim-34b412244",
       icon: "mdi:linkedin",
     },
   ],
