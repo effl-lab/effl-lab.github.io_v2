@@ -4,7 +4,7 @@ import seunghyeonPhoto from "./photo/seunghyeon.jpg";
 const seunghyeon: PersonEntry = {
   group: "ms",
   order: 2,
-  name: "Seunghyun Kim",
+  name: "Seunghyeon Kim",
   role: "Enable high-FPS video processing with low overhead 🎥",
   bio: "Discovering overlooked problems from new perspectives",
   avatar: seunghyeonPhoto,
