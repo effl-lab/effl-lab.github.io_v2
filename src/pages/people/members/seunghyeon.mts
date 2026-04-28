@@ -21,6 +21,11 @@ const seunghyeon: PersonEntry = {
       href: "www.linkedin.com/in/seunghyeon-kim-34b412244",
       icon: "mdi:linkedin",
     },
+    {
+      label: "Scholar",
+      href: "https://scholar.google.co.kr/citations?user=Y-y3Y0kAAAAJ&hl=ko&oi=sra",
+      icon: "mdi:school-outline",
+    },
   ],
 };
 
