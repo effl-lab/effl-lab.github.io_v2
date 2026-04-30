@@ -5,7 +5,7 @@ export const publicationOrder = {
     "post-training-quantization-of-vision-encoders-needs-prefixing-registers.paper.mts",
   ],
   "2026": [
-    "oaof.mts",
+    "oaof.paper.mts",
     "specetd.paper.mts",
     "lipo.paper.mts",
     "auditorybench-plus-plus.paper.mts",
