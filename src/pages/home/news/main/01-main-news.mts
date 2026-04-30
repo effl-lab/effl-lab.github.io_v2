@@ -1,6 +1,7 @@
 import type { NewsEntry } from "../_types.mts";
 
 const mainNews: NewsEntry[] = [
+  { date: "May 2026", text: "ICML 2026 🇰🇷: Theoretical analysis of generalization vs. feature learning strength; led by Taesun" },
   { date: "Apr 2026", text: "ACL 2026 🇺🇸: On-device end-turn detection (Main); Limitations of Causal LLMs (Findings); both led by Hyunjong" },
   { date: "Mar 2026", text: "Jaeho is serving as an Area Chair for NeurIPS 2026" },
   { date: "Feb 2026", text: "Jaeho is serving as an Action Editor for TMLR" },
