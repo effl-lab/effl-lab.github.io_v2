@@ -6,7 +6,6 @@ const paper: PaperEntry = {
   authors: ["Taesun Yeom", "Jaeho Lee"],
   venue: "ICLR 2025 Workshop: Weight Space Learning",
   year: "2025",
-  badge: "Workshop",
 };
 
 export default paper;
