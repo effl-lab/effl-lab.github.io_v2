@@ -13,24 +13,20 @@ const examplePaper: PaperEntry = {
   // 예: ["Alice Kim", "Bob Lee", "Jaeho Lee"]
   authors: ["First Author", "Second Author", "Third Author"],
 
-  // 학회 / 저널 / 아카이브 정보
-  // 예: "ICLR 2026", "arXiv 2601.12345", "ICML 2025"
-  venue: "Conference 2026",
+  // 카드 상단 왼쪽 배지에 표시할 venue 이름
+  // 예: "ICLR", "arXiv", "ICML", "TMLR"
+  venue: "ICLR",
 
   // 연도
   year: "2026",
-
-  // 카드 상단 왼쪽의 분류 배지
-  // 보통 "Conference", "Journal", "Preprint", "Workshop", "Poster" 등을 사용합니다.
-  badge: "Conference",
 
   // 제목 클릭 시 이동할 링크
   // 보통 arXiv, OpenReview, ACM, IEEE, project page 등을 넣습니다.
   link: "https://example.com/paper",
 
-  // 추가 강조 정보
-  // 예: ["Oral"], ["Spotlight"], ["Outstanding paper award"]
-  highlights: [],
+  // 카드 상단 오른쪽 배지들
+  // 예: ["Spotlight"], ["Oral", "Best Paper"], ["Workshop: UniReps"]
+  hashtags: [],
 
   // 카드 하단 리소스 링크
   // label은 화면에 표시되는 이름이고, href는 실제 이동 링크입니다.

@@ -5,9 +5,8 @@ const paper: PaperEntry = {
     "SCANNER: Knowledge-Enhanced Approach for Robust Multi-modal Named Entity Recognition of Unseen Entities",
   link: "https://arxiv.org/abs/2404.01914",
   authors: ["Hyunjong Ok", "Taeho Kil", "Sukmin Seo", "Jaeho Lee"],
-  venue: "NAACL 2024",
+  venue: "NAACL",
   year: "2024",
-  badge: "Conference",
 };
 
 export default paper;

@@ -11,9 +11,9 @@ const paper: PaperEntry = {
     "Jaeho Lee",
     "Yongjune Kim",
   ],
-  venue: "IEEE IoT Journal (IEEE Communication Theory Workshop 2024)",
+  venue: "IEEE IoT Journal",
+  hashtags: ["IEEE Communication Theory Workshop 2024"],
   year: "2024",
-  badge: "Journal",
 };
 
 export default paper;

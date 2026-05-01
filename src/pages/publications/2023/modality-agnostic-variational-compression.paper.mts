@@ -11,9 +11,9 @@ const paper: PaperEntry = {
     "Jaeho Lee",
     "Jinwoo Shin",
   ],
-  venue: "ICML 2023 (ICLR 2023 Neural Fields Workshop)",
+  venue: "ICML",
+  hashtags: ["ICLR 2023 Neural Fields Workshop"],
   year: "2023",
-  badge: "Conference",
 };
 
 export default paper;

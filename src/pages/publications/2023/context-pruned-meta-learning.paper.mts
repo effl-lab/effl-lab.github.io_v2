@@ -11,9 +11,9 @@ const paper: PaperEntry = {
     "Jinwoo Shin",
     "Jonathan R. Schwarz",
   ],
-  venue: "NeurIPS 2023 (ICLR 2023 Neural Fields Workshop)",
+  venue: "NeurIPS",
+  hashtags: ["ICLR 2023 Neural Fields Workshop"],
   year: "2023",
-  badge: "Conference",
   resources: [
     {
       label: "Code",

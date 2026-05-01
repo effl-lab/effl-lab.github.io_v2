@@ -5,9 +5,8 @@ const paper: PaperEntry = {
     "Spread Spurious Attribute: Improving Worst-Group Accuracy with Spurious Attribute Estimation",
   link: "https://openreview.net/forum?id=_F9xpOrqyX9",
   authors: ["Junhyun Nam", "Jaehyung Kim", "Jaeho Lee", "Jinwoo Shin"],
-  venue: "ICLR 2022",
+  venue: "ICLR",
   year: "2022",
-  badge: "Conference",
 };
 
 export default paper;

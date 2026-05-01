@@ -5,9 +5,9 @@ const paper: PaperEntry = {
     "Provable Memorization via Deep Neural Networks using Sub-linear Parameters",
   link: "https://proceedings.mlr.press/v134/park21a.html",
   authors: ["Sejun Park", "Jaeho Lee", "Chulhee Yun", "Jinwoo Shin"],
-  venue: "COLT 2021 (DeepMath 2020 Oral)",
+  venue: "COLT",
+  hashtags: ["DeepMath 2020 Oral"],
   year: "2021",
-  badge: "Conference",
 };
 
 export default paper;

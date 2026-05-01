@@ -5,10 +5,12 @@ const paper: PaperEntry = {
     "The Role of Masking for Efficient Supervised Knowledge Distillation of Vision Transformers",
   link: "https://arxiv.org/abs/2302.10494",
   authors: ["Seungwoo Son", "Jegwang Ryu", "Namhoon Lee", "Jaeho Lee"],
-  venue:
-    "ECCV 2024 (ICLR 2023 Sparsity Workshop, Outstanding paper award @ IPIU 2023)",
+  venue: "ECCV",
+  hashtags: [
+    "ICLR 2023 Sparsity Workshop",
+    "Outstanding paper award @ IPIU 2023",
+  ],
   year: "2024",
-  badge: "Conference",
   resources: [
     {
       label: "Project page",

@@ -10,8 +10,7 @@ export interface PaperEntry {
   venue: string;
   link?: string;
   year: string;
-  badge?: string;
-  highlights?: string[];
+  hashtags?: string[];
   notes?: string[];
   resources?: PaperResource[];
 }

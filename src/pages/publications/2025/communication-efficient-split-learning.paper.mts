@@ -12,7 +12,6 @@ const paper: PaperEntry = {
   ],
   venue: "IEEE TNNLS",
   year: "2025",
-  badge: "Journal",
 };
 
 export default paper;

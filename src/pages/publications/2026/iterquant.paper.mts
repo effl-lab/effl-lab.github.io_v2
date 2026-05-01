@@ -10,9 +10,8 @@ const paper: PaperEntry = {
     "Jaeho Lee",
     "Youngjoo Lee",
   ],
-  venue: "DATE 2026",
+  venue: "DATE",
   year: "2026",
-  badge: "Conference",
 };
 
 export default paper;

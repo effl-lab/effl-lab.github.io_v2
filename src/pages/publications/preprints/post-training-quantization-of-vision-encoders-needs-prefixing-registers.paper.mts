@@ -10,10 +10,9 @@ const paper: PaperEntry = {
     "Kyuyeun Kim",
     "Jaeho Lee",
   ],
-  venue: "arXiv 2510.04547",
+  venue: "arXiv",
   link: "https://arxiv.org/abs/2510.04547",
   year: "2025",
-  badge: "Preprint",
 };
 
 export default paper;

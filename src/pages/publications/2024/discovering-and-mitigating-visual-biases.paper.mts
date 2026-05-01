@@ -11,9 +11,9 @@ const paper: PaperEntry = {
     "Jaeho Lee",
     "Jinwoo Shin",
   ],
-  venue: "CVPR 2024 Highlight (top 2.8%) (ICML 2023 SCIS Workshop)",
+  venue: "CVPR",
+  hashtags: ["Highlight", "ICML 2023 SCIS Workshop"],
   year: "2024",
-  badge: "Conference",
   resources: [
     {
       label: "Code",

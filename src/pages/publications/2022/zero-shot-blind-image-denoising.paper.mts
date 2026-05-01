@@ -4,9 +4,8 @@ const paper: PaperEntry = {
   title: "Zero-shot Blind Image Denoising via Implicit Neural Representations",
   link: "https://arxiv.org/abs/2204.02405",
   authors: ["Chaewon Kim", "Jaeho Lee", "Jinwoo Shin"],
-  venue: "arXiv 2204.02405",
+  venue: "arXiv",
   year: "2022",
-  badge: "Preprint",
 };
 
 export default paper;

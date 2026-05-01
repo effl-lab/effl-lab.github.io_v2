@@ -12,9 +12,8 @@ const paper: PaperEntry = {
     "Dokwan Oh",
     "Jaeho Lee",
   ],
-  venue: "ICML 2024",
+  venue: "ICML",
   year: "2024",
-  badge: "Conference",
   resources: [
     {
       label: "Project page",

@@ -5,9 +5,8 @@ const paper: PaperEntry = {
     "Rethinking Pruning Large Language Models: Benefits and Pitfalls of Reconstruction Error Minimization",
   link: "https://arxiv.org/abs/2406.15524",
   authors: ["Sungbin Shin", "Wonpyo Park", "Jaeho Lee", "Namhoon Lee"],
-  venue: "EMNLP 2024",
+  venue: "EMNLP",
   year: "2024",
-  badge: "Conference",
 };
 
 export default paper;

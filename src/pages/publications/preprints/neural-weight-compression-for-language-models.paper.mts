@@ -10,10 +10,9 @@ const paper: PaperEntry = {
     "Dokwan Oh",
     "Jaeho Lee",
   ],
-  venue: "arXiv 2510.11234",
+  venue: "arXiv",
   link: "https://arxiv.org/abs/2510.11234",
   year: "2025",
-  badge: "Preprint",
 };
 
 export default paper;

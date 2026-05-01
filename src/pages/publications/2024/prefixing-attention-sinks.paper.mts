@@ -11,9 +11,8 @@ const paper: PaperEntry = {
     "Kyuyeun Kim",
     "Jaeho Lee",
   ],
-  venue: "EMNLP 2024",
+  venue: "EMNLP",
   year: "2024",
-  badge: "Conference",
 };
 
 export default paper;

@@ -4,9 +4,8 @@ const paper: PaperEntry = {
   title: "Fast Training of Sinusoidal Neural Fields via Scaling Initialization",
   link: "https://openreview.net/forum?id=Sr5XaZzirA",
   authors: ["Taesun Yeom*", "Sangyoon Lee*", "Jaeho Lee"],
-  venue: "ICLR 2025",
+  venue: "ICLR",
   year: "2025",
-  badge: "Conference",
 };
 
 export default paper;

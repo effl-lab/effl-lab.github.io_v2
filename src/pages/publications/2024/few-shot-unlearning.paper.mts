@@ -11,9 +11,8 @@ const paper: PaperEntry = {
     "Dongwoo Kim",
     "Jungseul Ok",
   ],
-  venue: "IEEE S&P 2024",
+  venue: "IEEE S&P",
   year: "2024",
-  badge: "Conference",
 };
 
 export default paper;

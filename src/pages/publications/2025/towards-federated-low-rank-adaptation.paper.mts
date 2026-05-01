@@ -5,9 +5,9 @@ const paper: PaperEntry = {
     "Towards Federated Low-Rank Adaptation with Rank-Heterogeneous Communication",
   link: "https://arxiv.org/abs/2406.17477",
   authors: ["Yuji Byun", "Jaeho Lee"],
-  venue: "NAACL 2025 (NeurIPS 2024 AFM Workshop)",
+  venue: "NAACL",
+  hashtags: ["NeurIPS 2024 AFM Workshop"],
   year: "2025",
-  badge: "Conference",
 };
 
 export default paper;

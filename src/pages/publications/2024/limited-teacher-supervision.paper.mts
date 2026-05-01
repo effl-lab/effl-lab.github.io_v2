@@ -5,9 +5,8 @@ const paper: PaperEntry = {
     "Decoding with Limited Teacher Supervision Requires Understanding When to Trust the Teacher",
   link: "https://arxiv.org/abs/2406.18002",
   authors: ["Hyunjong Ok", "Jegwang Ryu", "Jaeho Lee"],
-  venue: "EMNLP 2024",
+  venue: "EMNLP",
   year: "2024",
-  badge: "Conference",
 };
 
 export default paper;

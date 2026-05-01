@@ -5,9 +5,9 @@ const paper: PaperEntry = {
     "Semi-Ensemble: A Simple Approach to Over-Parameterize Model Interpolation",
   link: "https://unireps.org",
   authors: ["Jiwoon Lee", "Jaeho Lee"],
-  venue: "NeurIPS 2023 Workshop: UniReps",
+  venue: "NeurIPS",
+  hashtags: ["Workshop: UniReps"],
   year: "2023",
-  badge: "Workshop",
 };
 
 export default paper;

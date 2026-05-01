@@ -10,9 +10,8 @@ const paper: PaperEntry = {
     "Jaeho Lee",
     "Jinwoo Shin",
   ],
-  venue: "NeurIPS 2022",
+  venue: "NeurIPS",
   year: "2022",
-  badge: "Conference",
 };
 
 export default paper;

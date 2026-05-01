@@ -4,9 +4,8 @@ const paper: PaperEntry = {
   title: "Prompt-based Depth Pruning of Large Language Models",
   link: "https://arxiv.org/abs/2502.04348",
   authors: ["Juyun Wee*", "Minjae Park*", "Jaeho Lee"],
-  venue: "ICML 2025",
+  venue: "ICML",
   year: "2025",
-  badge: "Conference",
 };
 
 export default paper;
