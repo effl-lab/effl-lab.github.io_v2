@@ -3,6 +3,7 @@ export const publicationOrder = {
     "neural-weight-compression-for-language-models.paper.mts",
     "do-reasoning-vlms-inversely-scale.paper.mts",
     "post-training-quantization-of-vision-encoders-needs-prefixing-registers.paper.mts",
+    "mira.paper.mts",
     "hyperclova_omni.paper.mts",
   ],
   "2026": [
