@@ -2,7 +2,7 @@ import type { PaperEntry } from "./_types.mts";
 
 // 사용 방법
 // 1. 이 파일을 복사해서 원하는 섹션 폴더(예: `2025/`, `preprints/`) 안으로 옮겨주세요.
-// 2. 파일 이름은 `your-paper.paper.mts` 형태로 바꿔주세요.
+// 2. 파일 이름은 `your-paper.mts` 형태로 바꿔주세요.
 // 3. 섹션 폴더 안에 넣기만 하면 `src/pages/publications.astro`에서 자동으로 불러옵니다.
 
 const examplePaper: PaperEntry = {

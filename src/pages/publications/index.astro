@@ -5,10 +5,51 @@ import { Icon } from "astro-icon/components";
 import type { PaperEntry, PaperResource } from "./_types.mts";
 import { publicationOrder } from "./_order.mts";
 
-const paperModules = import.meta.glob<{ default: PaperEntry }>(
-  "./**/*.paper.mts",
+const paperModules = import.meta.glob<{ default: unknown }>(
+  ["./**/*.mts", "!./_order.mts", "!./_types.mts", "!./example.mts"],
   { eager: true },
 );
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null;
+}
+
+function isStringArray(value: unknown): value is string[] {
+  return (
+    Array.isArray(value) && value.every((item) => typeof item === "string")
+  );
+}
+
+function isOptionalString(value: unknown): value is string | undefined {
+  return value === undefined || typeof value === "string";
+}
+
+function isPaperResource(value: unknown): value is PaperResource {
+  if (!isRecord(value)) return false;
+
+  return (
+    typeof value.label === "string" &&
+    isOptionalString(value.href) &&
+    isOptionalString(value.icon)
+  );
+}
+
+function isPaperEntry(value: unknown): value is PaperEntry {
+  if (!isRecord(value)) return false;
+
+  return (
+    typeof value.title === "string" &&
+    isStringArray(value.authors) &&
+    typeof value.venue === "string" &&
+    isOptionalString(value.link) &&
+    typeof value.year === "string" &&
+    (value.hashtags === undefined || isStringArray(value.hashtags)) &&
+    (value.notes === undefined || isStringArray(value.notes)) &&
+    (value.resources === undefined ||
+      (Array.isArray(value.resources) &&
+        value.resources.every(isPaperResource)))
+  );
+}
 
 function getPaperHashtags(paper: PaperEntry) {
   return (paper.hashtags ?? [])
@@ -66,12 +107,11 @@ function resolveSectionPapers(folder: string) {
   );
 
   return Object.entries(paperModules)
-    .filter(([path, module]) => {
-      if (!module?.default) return false;
-
-      return path.startsWith(`./${folder}/`);
-    })
-    .sort(([pathA], [pathB]) => {
+    .filter(([path]) => path.startsWith(`./${folder}/`))
+    .flatMap(([path, module]) =>
+      isPaperEntry(module.default) ? [{ path, paper: module.default }] : [],
+    )
+    .sort(({ path: pathA }, { path: pathB }) => {
       const fileNameA = getPaperFileName(pathA);
       const fileNameB = getPaperFileName(pathB);
       const rankA = rankMap.get(fileNameA);
@@ -86,7 +126,7 @@ function resolveSectionPapers(folder: string) {
 
       return fileNameA.localeCompare(fileNameB);
     })
-    .map(([, module]) => module.default);
+    .map(({ paper }) => paper);
 }
 
 const sections = [

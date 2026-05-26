@@ -4,8 +4,8 @@ const paper: PaperEntry = {
   title: "Activation Quantization of Vision Encoders Needs Prefixing Registers",
   authors: [
     "Seunghyeon Kim",
-    "Jinho Kim",
     "Taesun Yeom",
+    "Jinho Kim",
     "Wonpyo Park",
     "Kyuyeun Kim",
     "Jaeho Lee",

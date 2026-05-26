@@ -1,7 +1,8 @@
 import type { PaperEntry } from "../_types.mts";
 
 const paper: PaperEntry = {
-  title: "Multi-frame Restoration for High-rate Lissajous Confocal Laser Endomicroscopy",
+  title:
+    "Multi-frame Restoration for High-rate Lissajous Confocal Laser Endomicroscopy",
   authors: [
     "Minhee Lee",
     "Sangyoon Lee",
