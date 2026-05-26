@@ -12,6 +12,7 @@ export const publicationOrder = {
     "lipo.paper.mts",
     "auditorybench-plus-plus.paper.mts",
     "iterquant.paper.mts",
+    "smallforsmall.mts",
   ],
   "2025": [
     "s2cap.paper.mts",
