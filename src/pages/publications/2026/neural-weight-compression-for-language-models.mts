@@ -10,9 +10,9 @@ const paper: PaperEntry = {
     "Dokwan Oh",
     "Jaeho Lee",
   ],
-  venue: "arXiv",
+  venue: "ICML Workshop: Resource-Adaptive Foundation Model Inference",
   link: "https://arxiv.org/abs/2510.11234",
-  year: "2025",
+  year: "2026",
 };
 
 export default paper;
