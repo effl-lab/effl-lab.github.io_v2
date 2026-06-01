@@ -1,6 +1,5 @@
 export const publicationOrder = {
   preprints: [
-    "neural-weight-compression-for-language-models.mts",
     "do-reasoning-vlms-inversely-scale.mts",
     "mira.mts",
     "hyperclova_omni.mts",
@@ -14,6 +13,7 @@ export const publicationOrder = {
     "linkd.mts",
     "smallforsmall.mts",
     "post-training-quantization-of-vision-encoders-needs-prefixing-registers.mts",
+    "neural-weight-compression-for-language-models.mts",
   ],
   "2025": [
     "s2cap.mts",
