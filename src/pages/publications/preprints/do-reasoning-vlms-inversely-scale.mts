@@ -2,7 +2,7 @@ import type { PaperEntry } from "../_types.mts";
 
 const paper: PaperEntry = {
   title:
-    "Do Reasoning Vision-Language Models Inversely Scale in Test-Time Compute? A Distractor-centric Empirical Analysis",
+    "Understanding the Effects of Distractors on Reasoning Vision-Language Models",
   authors: ["Jiyun Bae", "Hyunjong Ok", "Sangwoo Mo", "Jaeho Lee"],
   venue: "arXiv",
   link: "https://arxiv.org/abs/2511.21397",
