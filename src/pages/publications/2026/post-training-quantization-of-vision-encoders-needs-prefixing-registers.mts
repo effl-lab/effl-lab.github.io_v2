@@ -10,7 +10,7 @@ const paper: PaperEntry = {
     "Kyuyeun Kim",
     "Jaeho Lee",
   ],
-  venue: "ICML Workshop: Resource-Adaptive Foundation Model Inference",
+  venue: "ICML Workshop: AdaptFM",
   link: "https://arxiv.org/abs/2510.04547",
   year: "2026",
 };
