@@ -15,7 +15,6 @@ const paper: PaperEntry = {
   venue: "MICCAI",
   link: "https://arxiv.org/abs/2605.00527",
   year: "2026",
-  hashtags: ["Accepted"],
 };
 
 export default paper;
