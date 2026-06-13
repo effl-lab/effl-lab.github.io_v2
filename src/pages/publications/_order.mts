@@ -1,10 +1,10 @@
 export const publicationOrder = {
   preprints: [
     "do-reasoning-vlms-inversely-scale.mts",
-    "mira.mts",
     "hyperclova_omni.mts",
   ],
   "2026": [
+    "mira.mts",
     "oaof.mts",
     "specetd.mts",
     "lipo.mts",
