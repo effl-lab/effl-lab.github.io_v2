@@ -21,6 +21,11 @@ const minjae: PersonEntry = {
       href: "https://www.linkedin.com/in/minjae-park-941368284",
       icon: "mdi:linkedin",
     },
+    {
+      label: "CV",
+      href: "https://drive.google.com/file/d/1OylgtwXrm1nMq_CtlxS6tb35BP9aypJZ/view?usp=sharing",
+      icon: "mdi:cv",
+    },
   ],
 };
 
