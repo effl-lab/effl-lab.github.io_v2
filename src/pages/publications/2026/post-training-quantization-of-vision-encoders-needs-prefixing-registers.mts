@@ -18,7 +18,7 @@ const paper: PaperEntry = {
       label: "Code",
       href: "https://github.com/spbob0418/RegCache",
     },
-  ]
+  ],
   year: "2026",
 };
 
