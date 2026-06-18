@@ -5,6 +5,7 @@ export const publicationOrder = {
     "hyperclova_omni.mts",
   ],
   "2026": [
+    "post-training-quantization-of-vision-encoders-needs-prefixing-registers.mts",
     "mira.mts",
     "oaof.mts",
     "specetd.mts",
@@ -13,7 +14,6 @@ export const publicationOrder = {
     "iterquant.mts",
     "linkd.mts",
     "smallforsmall.mts",
-    "post-training-quantization-of-vision-encoders-needs-prefixing-registers.mts",
     "neural-weight-compression-for-language-models.mts",
   ],
   "2025": [
