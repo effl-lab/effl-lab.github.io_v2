@@ -1,6 +1,6 @@
 export const publicationOrder = {
   preprints: [
-    "sparc.mts"
+    "sparc.mts",
     "do-reasoning-vlms-inversely-scale.mts",
     "hyperclova_omni.mts",
   ],
