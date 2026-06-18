@@ -10,8 +10,15 @@ const paper: PaperEntry = {
     "Kyuyeun Kim",
     "Jaeho Lee",
   ],
-  venue: "ICML Workshop: AdaptFM",
+  venue: "ECCV",
+  hashtags: ["ICML 2026 AdaptFM Workshop"],
   link: "https://arxiv.org/abs/2510.04547",
+  resources: [
+    {
+      label: "Code",
+      href: "https://github.com/spbob0418/RegCache",
+    },
+  ]
   year: "2026",
 };
 
