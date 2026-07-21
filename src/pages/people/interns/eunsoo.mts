@@ -7,4 +7,4 @@ const exampleIntern: InternEntry = {
   focus: "Deep Learning",
 };
 
-export default exampleIntern;
+export default eunsoo;
