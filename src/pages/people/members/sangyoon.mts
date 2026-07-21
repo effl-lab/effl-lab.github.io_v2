@@ -21,6 +21,16 @@ const sangyoon: PersonEntry = {
       href: "mailto:sangyoon.lee@postech.ac.kr",
       icon: "mdi:email-outline",
     },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/sangyoon-lee-07a4972a9/",
+      icon: "mdi:linkedin",
+    },
+    {
+      label: "Scholar",
+      href: "https://scholar.google.com/citations?user=n4TsMroAAAAJ&hl=ko",
+      icon: "mdi:school-outline",
+    },
   ],
 };
 
