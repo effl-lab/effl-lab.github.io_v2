@@ -1,6 +1,6 @@
 import type { InternEntry } from "./_types.mts";
 
-const exampleIntern: InternEntry = {
+const jihye: InternEntry = {
   order: 6,
   name: "Jihye Han",
   period: "Summer '26-",
