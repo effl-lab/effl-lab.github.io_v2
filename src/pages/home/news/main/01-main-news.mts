@@ -1,7 +1,9 @@
 import type { NewsEntry } from "../_types.mts";
 
 const mainNews: NewsEntry[] = [
-  { date: "Jun 2026", text: "ECCV 2026 🇸🇪: Vision Encoder Quantization with Registers; led by Seunghyeon" },
+  { date: "Jul 2026", text: "Hyunjong is selected as a recipient of 2026 Ph.D. Excellence Scholarship by KOSAF & MSIT" },
+  { date: "Jul 2026", text: "Seunghyeon gave a talk at Google" },
+  { date: "Jun 2026", text: "ECCV 2026 🇸🇪: Quantization for Vision Encoders; led by Seunghyeon" },
   { date: "Jun 2026", text: "MICCAI 2026 🇫🇷: Restoration for Lissajous Confocal Laser Endomicrioscopy; led by Minhee" },
   { date: "May 2026", text: "ICML 2026 🇰🇷: Theoretical analysis of generalization vs. feature learning strength; led by Taesun" },
   { date: "Apr 2026", text: "ACL 2026 🇺🇸: On-device end-turn detection (Main); Limitations of Causal LLMs (Findings); both led by Hyunjong" },
