@@ -21,6 +21,16 @@ const minhee: PersonEntry = {
       href: "mailto:mhlee02@postech.ac.kr",
       icon: "mdi:email-outline",
     },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/minhee-lee-42b651257/",
+      icon: "mdi:linkedin",
+    },
+    {
+      label: "Scholar",
+      href: "https://scholar.google.com/citations?user=XoIdQ_AAAAAJ&hl=ko",
+      icon: "mdi:school-outline",
+    },
   ],
 };
 
