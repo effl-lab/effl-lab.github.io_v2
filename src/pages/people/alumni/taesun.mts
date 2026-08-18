@@ -1,7 +1,7 @@
 import type { AlumniEntry } from "./_types.mts";
 import avatar from "./photo/taesun.jpeg";
 
-const minkyu: AlumniEntry = {
+const taesun: AlumniEntry = {
   order: 2,
   name: "Taesun Yeom",
   avatar,
