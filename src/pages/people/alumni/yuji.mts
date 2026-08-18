@@ -2,7 +2,7 @@ import type { AlumniEntry } from "./_types.mts";
 import avatar from "./photo/yuji.jpg";
 
 const yuji: AlumniEntry = {
-  order: 3,
+  order: 5,
   name: "Yu Ji Byun",
   avatar,
   summary:
