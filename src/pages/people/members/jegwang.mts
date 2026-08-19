@@ -9,7 +9,7 @@ const jegwang: PersonEntry = {
   bio: "Understanding efficient and reliable AI systems through efficient information representation and compression",
   avatar: jegwangPhoto,
   status: "M.S.",
-  tags: ["Model compression", "Efficient LLMs", "Accelerated Training"],
+  tags: ["Model Compression", "Efficient Inference", "Knowledge Distillation", "Neural Codecs"],
   links: [
     {
       label: "Mail",
