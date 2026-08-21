@@ -1,10 +1,11 @@
 export const publicationOrder = {
   preprints: [
     "sparc.mts",
-    "do-reasoning-vlms-inversely-scale.mts",
     "hyperclova_omni.mts",
   ],
   "2026": [
+    "undis.mts",
+    "tempcore.mts",
     "post-training-quantization-of-vision-encoders-needs-prefixing-registers.mts",
     "mira.mts",
     "oaof.mts",
