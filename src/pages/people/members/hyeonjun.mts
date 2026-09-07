@@ -3,7 +3,7 @@ import hyeonjunPhoto from "./photo/hyeonjun.jpg";
 
 const hyeonjun: PersonEntry = {
   group: "phd",
-  order: 7,
+  order: 6,
   name: "Hyeonjun Kim",
   role: "Image Compression For Vision-Language-Action Models 🤖",
   bio: "A highly self-motivated researcher investigating how to integrate different modalities.",
