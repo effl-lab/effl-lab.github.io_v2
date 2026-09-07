@@ -3,7 +3,7 @@ import minheePhoto from "./photo/minhee.jpg";
 
 const minhee: PersonEntry = {
   group: "ms",
-  order: 3,
+  order: 2,
   name: "Minhee Lee",
   role: "Understanding Prompt Ignoring in mmDiT 🎨",
   bio: "Aiming to enhance performance by tackling fundamental causes.",
