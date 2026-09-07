@@ -3,7 +3,7 @@ import minsuPhoto from "./photo/minsoo.jpg";
 
 const minsu: PersonEntry = {
   group: "ms",
-  order: 4,
+  order: 3,
   name: "Minsoo Lee",
   role: "Efficient Image Enhancement in Extreme Adverse Conditions 🌌",
   bio: 'Adapting efficient machine learning to military field, "Fight tonight"',
