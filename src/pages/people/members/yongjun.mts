@@ -3,7 +3,7 @@ import yongjunPhoto from "./photo/yongjun.jpg";
 
 const yongjun: PersonEntry = {
   group: "phd",
-  order: 6,
+  order: 5,
   name: "Yongjun Kim",
   role: "Improving reasoning models with test-time intervention",
   bio: "Interested in improving intelligence in test-time (e.g., test-time scaling, test-time training)",
