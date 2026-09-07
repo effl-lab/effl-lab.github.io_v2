@@ -3,7 +3,7 @@ import sangbeomPhoto from "./photo/sangbeom.jpg";
 
 const sangbeom: PersonEntry = {
   group: "phd",
-  order: 8,
+  order: 7,
   name: "Sangbeom Ha",
   role: "Efficient Vision-Language-Action Models for Robotic Intelligence 🤖",
   bio: "Bridge mathematical optimization and EE principles to architect ultra-efficient Physical AI",
