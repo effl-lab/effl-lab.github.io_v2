@@ -3,7 +3,7 @@ import minjaePhoto from "./photo/minjae.jpg";
 
 const minjae: PersonEntry = {
   group: "phd",
-  order: 2,
+  order: 3,
   name: "Minjae Park",
   role: "ML Efficiency: data & inference",
   bio: "Making AI cheaper to run — so more people and teams can actually afford to use it",
