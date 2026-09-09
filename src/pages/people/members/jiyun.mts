@@ -3,7 +3,7 @@ import jiyunPhoto from "./photo/jiyun.jpg";
 
 const jiyun: PersonEntry = {
   group: "phd",
-  order: 4,
+  order: 2,
   name: "Jiyun Bae",
   role: "Robustness of Reasoning Vision-Language Models 🕶️",
   bio: "Aspiring to build AI systems that perceive the visual world as faithfully as they reason about it.",
