@@ -12,9 +12,24 @@ const jiyun: PersonEntry = {
   tags: ["Vision-Language Models", "Trustworthiness", "Robustness"],
   links: [
     {
+      label: "Webpage",
+      href: "https://jiyunbae007.github.io",
+      icon: "mdi:web",
+    },
+    {
       label: "Mail",
       href: "mailto:jiyun.bae@postech.ac.kr",
       icon: "mdi:email-outline",
+    },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/jiyun-bae-33568221a/",
+      icon: "mdi:linkedin",
+    },
+    {
+      label: "Scholar",
+      href: "https://scholar.google.com/citations?user=aKgDxOkAAAAJ&hl=ko",
+      icon: "mdi:school-outline",
     },
   ],
 };
