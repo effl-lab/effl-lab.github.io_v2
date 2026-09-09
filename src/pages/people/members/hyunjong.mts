@@ -3,7 +3,7 @@ import hyunjongPhoto from "./photo/hyunjong.JPG";
 
 const hyunjong: PersonEntry = {
   group: "phd",
-  order: 3,
+  order: 4,
   name: "Hyunjong Ok",
   role: "Advancing Audio Technologies for Multimodal Intelligence 🔈",
   bio: "Diagnostic Evaluation of Multimodal AI",
