@@ -11,7 +11,7 @@ const kwangmo: PersonEntry = {
   bio: "Toward deployed models that keep learning new skills without forgetting, ultimately for robots.",
   avatar: kwangmoPhoto,
   status: "M.S.",
-  tags: ["Continual Learning", "On-Device Learning", "Robotics"],
+  tags: ["Continual Learning", "On-Device AI", "Robot Learning"],
 
   // icon 예시: "mdi:web", "mdi:email-outline", "mdi:twitter", "mdi:linkedin"
   links: [
