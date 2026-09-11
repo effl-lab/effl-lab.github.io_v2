@@ -9,7 +9,7 @@ const minhee: PersonEntry = {
   bio: "n",
   avatar: wonjunePhoto,
   status: "M.S.",
-  tags: ["n", "n", "n"],
+  tags: ["KV Cache Communication", "Speculative Decoding", "Diffusion LLM"],
   links: [
     {
       label: "Webpage",
