@@ -5,7 +5,7 @@ const wonjune: PersonEntry = {
   group: "ms",
   order: 6,
   name: "Wonjune Lee",
-  role: "Cross-model KV cache transfer for speculative decoding",
+  role: "Cross-model KV cache transfer for speculative decoding 🤖",
   bio: "Efficient cross-model communication for accelerated inference",
   avatar: wonjunePhoto,
   status: "M.S.",
