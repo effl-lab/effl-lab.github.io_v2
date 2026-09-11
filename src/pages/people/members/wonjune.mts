@@ -1,7 +1,7 @@
 import type { PersonEntry } from "./_types.mts";
 import wonjunePhoto from "./photo/wonjune.jpg";
 
-const minhee: PersonEntry = {
+const wonjune: PersonEntry = {
   group: "ms",
   order: 6,
   name: "Wonjune Lee",
