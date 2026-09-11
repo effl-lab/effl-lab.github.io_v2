@@ -6,7 +6,7 @@ const kwangmo: PersonEntry = {
   order: 4,
   name: "Kwangmo Yang",
 
-  role: "Memory-Efficient Continual Learning",
+  role: "Memory-Efficient Continual Learning 🌱",
 
   bio: "Toward deployed models that keep learning new skills without forgetting, ultimately for robots.",
   avatar: kwangmoPhoto,
