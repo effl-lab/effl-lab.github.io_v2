@@ -5,11 +5,11 @@ const junhyeok: PersonEntry = {
   group: "ms",
   order: 7,
   name: "Junhyeok Lee",
-  role: "Efficient KV Cache Construction for Video Understanding 🎥",
-  bio: "Exploring optimized long-term memory for video understanding.",
+  role: "Efficient Long-Term Visual Memory for Video Understanding 🎥",
+  bio: "Exploring how video LLMs can retain and utilize visual information over long contexts.",
   avatar: junhyeokPhoto,
   status: "M.S.",
-  tags: ["Vision-Language Models", "Video Understanding", "KV Cache Compression"],
+  tags: ["Video LLMs", "Streaming & Offline Video Understanding", "Long-Term Memory"],
   links: [
     {
       label: "Webpage",
