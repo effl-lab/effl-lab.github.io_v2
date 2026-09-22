@@ -1,6 +1,11 @@
 import type { NewsEntry } from "../_types.mts";
 
 const moreNews: NewsEntry[] = [
+  { date: "Nov 2025", text: "DATE 2026 🇮🇹: Mixed-Precision Quantization via Iterative Search" },
+  { date: "Oct 2025", text: "Jaeho was selected as a Top Area Chair at NeurIPS 2025" },
+  { date: "Oct 2025", text: "Jaeho was selected as an outstanding young researcher by CICS" },
+  { date: "Oct 2025", text: "Jaeho will give a talk at Global AI Frontiers Symposium"},
+
   {
     date: "Oct 2025",
     text: "Sangyoon and Minjae will join NAVER AI Residency program, for K-AI 🇰🇷",
