@@ -2,6 +2,18 @@ import type { PastNewsSection } from "../_types.mts";
 
 const pastNews: PastNewsSection[] = [
   {
+    year: "2025",
+    items: [
+      { date: "Nov", text: "DATE 2026 🇮🇹: Mixed-Precision Quantization via Iterative Search" },
+      { date: "Oct", text: "Jaeho was selected as a Top Area Chair at NeurIPS 2025" },
+      {
+        date: "Oct"
+        text: "Jaeho was selected as an outstanding young researcher by CICS",
+      },
+      { date: "Oct", text: "Jaeho will give a talk at Global AI Frontiers Symposium"}
+    ],
+  },
+  {
     year: "2024",
     items: [
       {
