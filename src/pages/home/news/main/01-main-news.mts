@@ -1,8 +1,8 @@
 import type { NewsEntry } from "../_types.mts";
 
 const mainNews: NewsEntry[] = [
-  { date: "Sep 2026", text: "Hyunjong joined [Salesforce](https://www.salesforce.com/) as an intern" },
-  { date: "Aug 2026", text: "EMNLP 2026 🇭🇺: Test-time scaling analysis for VLMs; led by Jiyun" },
+  { date: "Sep 2026", text: "Hyunjong joined Salesforce as an intern" },
+  { date: "Aug 2026", text: "EMNLP 2026 (oral) 🇭🇺: Test-time scaling analysis for VLMs; led by Jiyun" },
   { date: "Aug 2026", text: "EMNLP 2026 🇭🇺: Robust evaluation of Video-LLMs; led by Hyunjong" },
   { date: "Jul 2026", text: "Hyunjong is selected as a recipient of 2026 Ph.D. Excellence Scholarship by KOSAF & MSIT" },
   { date: "Jul 2026", text: "Seunghyeon gave a talk at Google" },
