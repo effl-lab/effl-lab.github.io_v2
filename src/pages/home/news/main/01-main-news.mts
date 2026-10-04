@@ -1,6 +1,7 @@
 import type { NewsEntry } from "../_types.mts";
 
 const mainNews: NewsEntry[] = [
+  { date: "Oct 2026", text: "Jiyun will give an invited talk at the UMich NLP reading group 🇺🇸" },
   { date: "Sep 2026", text: "Hyunjong joined Salesforce as an intern" },
   { date: "Aug 2026", text: "EMNLP 2026 (oral) 🇭🇺: Test-time scaling analysis for VLMs; led by Jiyun" },
   { date: "Aug 2026", text: "EMNLP 2026 🇭🇺: Robust evaluation of Video-LLMs; led by Hyunjong" },
