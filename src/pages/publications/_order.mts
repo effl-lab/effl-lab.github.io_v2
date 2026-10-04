@@ -4,6 +4,7 @@ export const publicationOrder = {
     "hyperclova_omni.mts",
   ],
   "2026": [
+    "kvcobra.mts",
     "undis.mts",
     "tempcore.mts",
     "post-training-quantization-of-vision-encoders-needs-prefixing-registers.mts",
