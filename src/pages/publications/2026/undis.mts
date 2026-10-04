@@ -6,6 +6,7 @@ const paper: PaperEntry = {
   venue: "EMNLP",
   link: "https://openreview.net/forum?id=JpvYBDgQwD",
   year: "2026",
+  hashtags: ["Oral"],
 };
 
 export default paper;
