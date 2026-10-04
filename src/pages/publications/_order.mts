@@ -1,5 +1,9 @@
 export const publicationOrder = {
   preprints: [
+    "l2ask.mts",
+    "primebench.mts",
+    "datakd.mts",
+    "partrep.mts",
     "sparc.mts",
     "hyperclova_omni.mts",
   ],
