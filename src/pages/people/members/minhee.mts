@@ -13,7 +13,7 @@ const minhee: PersonEntry = {
   links: [
     {
       label: "Webpage",
-      href: "https://github.com/MoOo2mini",
+      href: "https://mooo2mini.github.io/",
       icon: "mdi:web",
     },
     {
