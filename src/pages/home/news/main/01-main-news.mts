@@ -1,6 +1,7 @@
 import type { NewsEntry } from "../_types.mts";
 
 const mainNews: NewsEntry[] = [
+  { date: "Oct 2026", text: "Taesun is selected as a Top Reviewer at NeurIPS 2026." },
   { date: "Oct 2026", text: "Jaeho is selected as a Top AC at NeurIPS 2026, in streak from 2025." },
   { date: "Oct 2026", text: "Jiyun will give an invited talk at the UMich NLP reading group 🇺🇸" },
   { date: "Sep 2026", text: "NeurIPS 2026 🇦🇺: Head-level bit allocation for KV cache compression" },
