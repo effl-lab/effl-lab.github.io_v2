@@ -23,7 +23,7 @@ const minjae: PersonEntry = {
     },
     {
       label: "CV",
-      href: "https://drive.google.com/file/d/1UhoSqPBhCJ52A49nv_WKK0pdAYmSFADQ/view?usp=sharing",
+      href: "https://drive.google.com/file/d/1OylgtwXrm1nMq_CtlxS6tb35BP9aypJZ/view?usp=sharing",
       icon: "mdi:web",
     },
   ],
