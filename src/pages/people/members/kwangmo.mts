@@ -16,7 +16,6 @@ const kwangmo: PersonEntry = {
   // icon 예시: "mdi:web", "mdi:email-outline", "mdi:twitter", "mdi:linkedin"
   links: [
     {
-    {
       label: "WebPage",
       href: "https://kmyxng.github.io/",
       icon: "mdi:web",
