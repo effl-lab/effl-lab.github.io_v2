@@ -12,6 +12,11 @@ const jegwang: PersonEntry = {
   tags: ["Model Compression", "Efficient Inference", "Knowledge Distillation", "Neural Codecs"],
   links: [
     {
+      label: "Webpage",
+      href: "https://jegwang-ryu.github.io/",
+      icon: "mdi:web",
+    },
+    {
       label: "Mail",
       href: "mailto:jegwang.ryu@postech.ac.kr",
       icon: "mdi:email-outline",
