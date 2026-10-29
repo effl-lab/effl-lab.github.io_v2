@@ -26,6 +26,11 @@ const minjae: PersonEntry = {
       href: "https://www.linkedin.com/in/minjae-park-941368284",
       icon: "mdi:linkedin",
     },
+    {
+      label: "GoogleScholar",
+      href: "https://scholar.google.com/citations?user=gnUrmxwAAAAJ&hl=ko",
+      icon: "mdi:school-outline",
+    },
   ],
 };
 
