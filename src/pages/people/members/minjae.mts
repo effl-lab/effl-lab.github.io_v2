@@ -12,6 +12,11 @@ const minjae: PersonEntry = {
   tags: ["Data Pruning", "Efficient Models", "Knowledge Distillation", "LLMs"],
   links: [
     {
+      label: "homepage",
+      href: "https://mjae-park.github.io/",
+      icon: "mdi:web",
+    },
+    {
       label: "Mail",
       href: "mailto:minjae0047@postech.ac.kr",
       icon: "mdi:email-outline",
@@ -20,11 +25,6 @@ const minjae: PersonEntry = {
       label: "Linkedin",
       href: "https://www.linkedin.com/in/minjae-park-941368284",
       icon: "mdi:linkedin",
-    },
-    {
-      label: "CV",
-      href: "https://drive.google.com/file/d/1OylgtwXrm1nMq_CtlxS6tb35BP9aypJZ/view?usp=sharing",
-      icon: "mdi:web",
     },
   ],
 };
